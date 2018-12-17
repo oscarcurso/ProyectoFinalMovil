@@ -37,7 +37,7 @@ public class PlayerScript : MonoBehaviour
     {
         int vidasGuardadas = GameControllerPPref.GetVidas();
         miAnimator = GetComponent<Animator>();
-        GetComponentInChildren<Transform>().gameObject.name = "Puneteador";
+       // GetComponentInChildren<Transform>().gameObject.name = "Puneteador";
         if (vidasGuardadas != 0)
         {
             txtVida.text = "Vidas: " + vidasGuardadas;
@@ -50,7 +50,32 @@ public class PlayerScript : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.Space))
+        if (Input.GetButtonDown("Fire1"))
+        {
+            miAnimator.SetTrigger("ostiando");
+        }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            miAnimator.SetTrigger("saltando");
+        }
+
+        if (Input.GetAxis("Vertical") > 0.5f)
+        {
+            miAnimator.ResetTrigger("ostiando");
+            corriendo = corriendo - 0.01f;
+            corriendo = Mathf.Max(0.11f, corriendo);
+            miAnimator.SetFloat("corriendo", corriendo);
+        }
+        if(Input.GetAxis("Vertical")> 0.9f)
+        {
+            miAnimator.ResetTrigger("ostiando");
+            corriendo = corriendo + 0.01f;
+            corriendo = Mathf.Min(1, corriendo);
+            miAnimator.SetFloat("corriendo", corriendo);
+        }
+
+
+        /*if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.Space))
         {
             miAnimator.ResetTrigger("ostiando");
             corriendo = corriendo - 0.01f;
@@ -79,7 +104,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             miAnimator.SetTrigger("saltando");
-        }
+        }*/
 
 
         if (corriendo >= 0f)
