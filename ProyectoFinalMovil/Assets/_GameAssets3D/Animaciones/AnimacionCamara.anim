@@ -1034,7 +1034,7 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 19.6
-    functionName: Fincamara
+    functionName: CamaraFinal
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

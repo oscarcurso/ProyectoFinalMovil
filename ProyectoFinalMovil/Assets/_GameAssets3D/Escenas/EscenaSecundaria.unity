@@ -248,6 +248,7 @@ MonoBehaviour:
   audioPrimero: {fileID: 523325879}
   txtVidas: {fileID: 1097638406}
   txtPuntos: {fileID: 1728593530}
+  escenaFinScript: {fileID: 1885997778}
 --- !u!136 &166508739
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -378,6 +379,7 @@ MonoBehaviour:
   audioPrimero: {fileID: 523325879}
   txtVidas: {fileID: 1097638406}
   txtPuntos: {fileID: 1728593530}
+  escenaFinScript: {fileID: 1885997778}
 --- !u!136 &231136400
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -589,6 +591,7 @@ MonoBehaviour:
   audioPrimero: {fileID: 523325879}
   txtVidas: {fileID: 1097638406}
   txtPuntos: {fileID: 1728593530}
+  escenaFinScript: {fileID: 1885997778}
 --- !u!4 &422945536 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400010, guid: 324eae1814511194c87c168d7ab4bf13,
@@ -3519,6 +3522,7 @@ MonoBehaviour:
   audioPrimero: {fileID: 523325879}
   txtVidas: {fileID: 1097638406}
   txtPuntos: {fileID: 1728593530}
+  escenaFinScript: {fileID: 1885997778}
 --- !u!54 &1765211332
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3629,6 +3633,7 @@ MonoBehaviour:
   audioPrimero: {fileID: 523325879}
   txtVidas: {fileID: 1097638406}
   txtPuntos: {fileID: 1728593530}
+  escenaFinScript: {fileID: 1885997778}
 --- !u!136 &1799059196
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3856,8 +3861,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ac72f83cc68b4d42ad89aab31a9c3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txtPuntos: {fileID: 1728593530}
-  txtVidas: {fileID: 1097638406}
 --- !u!82 &1885997779
 AudioSource:
   m_ObjectHideFlags: 0

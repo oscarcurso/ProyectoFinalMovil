@@ -19,7 +19,7 @@ public class Enemigostontos : MonoBehaviour {
     [SerializeField] Text txtPuntos;
     int puntosAlmacenados;
     int vidasAlmacenadas;
-
+     public UIScriptEscenaFin escenaFinScript;
 
 
 
@@ -63,6 +63,7 @@ public class Enemigostontos : MonoBehaviour {
         audioPrimero.Stop();
         camaraPpal.gameObject.SetActive(false);
         camaraSec.gameObject.SetActive(true);
+        escenaFinScript.enabled = false;
     }
 
     public void RotarAleatoriamente() {
