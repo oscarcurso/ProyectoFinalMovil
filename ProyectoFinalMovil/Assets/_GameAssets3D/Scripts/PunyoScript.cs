@@ -40,7 +40,7 @@ public class PunyoScript : MonoBehaviour
 
     private void Awake()
     {
-       //PlayerPrefs.DeleteAll();
+       PlayerPrefs.DeleteAll();
         puntuacionAlmacenada = GameControllerPPref.GetPuntos();
     }
 

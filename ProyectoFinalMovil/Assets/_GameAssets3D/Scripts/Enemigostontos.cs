@@ -19,7 +19,7 @@ public class Enemigostontos : MonoBehaviour {
     [SerializeField] Text txtPuntos;
     int puntosAlmacenados;
     int vidasAlmacenadas;
-     public UIScriptEscenaFin escenaFinScript;
+    public UIScriptEscenaFin escenaFinScript;
 
 
 
