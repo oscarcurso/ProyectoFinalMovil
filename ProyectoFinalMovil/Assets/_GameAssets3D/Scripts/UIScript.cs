@@ -15,6 +15,12 @@ public class UIScript : MonoBehaviour {
     {
         maxPunt = GameControllerPPref.GetPuntos();
 
+       
+    }
+
+
+    // Use this for initialization
+    void Start () {
         if (maxPunt != 0)
         {
             btnEscena2.gameObject.SetActive(true);
@@ -23,21 +29,31 @@ public class UIScript : MonoBehaviour {
         {
             btnEscena2.gameObject.SetActive(false);
         }
-    }
 
-
-    // Use this for initialization
-    void Start () {
-       
-        
-        //maxPunt= GameControllerPPref.GetPuntos();
+        //int puntos= GameControllerPPref.GetPuntos();
         txtMaxPuntuacion.text = "Máxima Puntuacion: " + maxPunt; 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            print("Fire1");
+            SceneManager.LoadScene(2);
+        }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            print("Fire2");
+            SceneManager.LoadScene(3);
+        }
+        if (Input.GetButtonDown("Fire3"))
+        {
+            print("Fire3");
+           // SceneManager.LoadScene(2);
+        }
+
+    }
     public void BotonSeleccionNiveles() {
         SceneManager.LoadScene(1);
     }
@@ -53,11 +69,7 @@ public class UIScript : MonoBehaviour {
         Application.Quit();
     }
 
-    public void Fincamara()
-    {
-        
-        SceneManager.LoadScene(1);
-    }
+   
 
   
 }

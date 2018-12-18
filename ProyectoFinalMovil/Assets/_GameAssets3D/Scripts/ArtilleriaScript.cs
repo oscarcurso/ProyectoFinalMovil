@@ -28,34 +28,11 @@ public class ArtilleriaScript : MonoBehaviour
     {
 
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Fire1"))
         {
             GameObject nuevoProyectil = Instantiate(prefabProyectil, puntoGeneracion.transform.position, puntoGeneracion.transform.rotation);
             nuevoProyectil.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * fuerza);
             audioCanyon.Play();
         }
-
-
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Rotate(0, -1, 0);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Rotate(0, 1, 0);
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.Rotate(1, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Rotate(-1, 0, 0);
-        }
-
-
-
     }
-
 }

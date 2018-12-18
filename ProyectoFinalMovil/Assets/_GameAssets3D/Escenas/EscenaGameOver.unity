@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.28711563, g: 0.3358623, b: 0.5218703, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -411,7 +411,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Salir
+  m_Text: 'Salir
+
+    Boton B'
 --- !u!222 &840938947
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -641,7 +643,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Seleccion
 
-    Niveles'
+    Niveles
+
+    Boton A'
 --- !u!222 &1179808903
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -657,10 +661,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1321153851}
+  - component: {fileID: 1321153852}
   - component: {fileID: 1321153850}
   - component: {fileID: 1321153849}
   - component: {fileID: 1321153848}
-  - component: {fileID: 1321153852}
   - component: {fileID: 1321153853}
   m_Layer: 5
   m_Name: Canvas
@@ -753,11 +757,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1321153847}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 018fe4a2cd2fe174a94f9fda8119fb15, type: 3}
+  m_Script: {fileID: 11500000, guid: 04faede672541de43baedeb245835c51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txtMaxPuntuacion: {fileID: 0}
-  btnEscena2: {fileID: 0}
 --- !u!82 &1321153853
 AudioSource:
   m_ObjectHideFlags: 0
@@ -975,7 +977,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1321153852}
+      - m_Target: {fileID: 0}
         m_MethodName: BotonExit
         m_Mode: 1
         m_Arguments:
@@ -1098,7 +1100,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1321153852}
+      - m_Target: {fileID: 0}
         m_MethodName: BotonSeleccionNiveles
         m_Mode: 1
         m_Arguments:

@@ -51,9 +51,9 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
-    m_EnvironmentLightingMode: 1
-    m_EnableBakedLightmaps: 0
-    m_EnableRealtimeLightmaps: 0
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 10
     m_Resolution: 2
@@ -89,7 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: ac6855f3672f2cc478f4ef642a2a9075,
+  m_LightingDataAsset: {fileID: 112000004, guid: dbcead36f062aac48ab128796be098c9,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -367,7 +367,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Inicio
 
-    Escena 2'
+    Escena 2
+
+    Boton B'
 --- !u!222 &375513667
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -503,7 +505,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Salir
+  m_Text: 'Salir
+
+    Boton X'
 --- !u!222 &840938947
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -734,7 +738,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.44
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -753,7 +757,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -767,13 +771,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1100746415}
-  m_LocalRotation: {x: 0.15056573, y: -0.4287183, z: -0.2119644, w: 0.86521775}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 4.519, y: -53.922, z: -29.831001}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1179808899
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,7 +862,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Inicio
 
-    Escena 1'
+    Escena 1
+
+    Boton A'
 --- !u!222 &1179808903
 CanvasRenderer:
   m_ObjectHideFlags: 0

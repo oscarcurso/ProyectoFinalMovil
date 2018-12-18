@@ -44,16 +44,16 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
-    m_EnvironmentLightingMode: 1
-    m_EnableBakedLightmaps: 0
-    m_EnableRealtimeLightmaps: 0
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 10
     m_Resolution: 2
@@ -89,8 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: b8aecc86285c3f445bc35d407b1a8aa3,
-    type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -190,7 +189,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 329886222}
+      - m_Target: {fileID: 0}
         m_MethodName: BotonInicioNivel1
         m_Mode: 1
         m_Arguments:
@@ -307,10 +306,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 329886221}
+  - component: {fileID: 329886222}
   - component: {fileID: 329886220}
   - component: {fileID: 329886219}
   - component: {fileID: 329886218}
-  - component: {fileID: 329886222}
   - component: {fileID: 329886223}
   m_Layer: 5
   m_Name: Canvas
@@ -403,11 +402,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 329886217}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 018fe4a2cd2fe174a94f9fda8119fb15, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ac72f83cc68b4d42ad89aab31a9c3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txtMaxPuntuacion: {fileID: 0}
-  btnEscena2: {fileID: 0}
 --- !u!82 &329886223
 AudioSource:
   m_ObjectHideFlags: 0
@@ -571,7 +568,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Exit
+  m_Text: 'Exit
+
+    Boton B'
 --- !u!222 &576890618
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -881,7 +880,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 329886222}
+      - m_Target: {fileID: 0}
         m_MethodName: BotonExit
         m_Mode: 1
         m_Arguments:
@@ -1068,7 +1067,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reinicio
+  m_Text: 'Reinicio
+
+    Boton A'
 --- !u!222 &1577887116
 CanvasRenderer:
   m_ObjectHideFlags: 0

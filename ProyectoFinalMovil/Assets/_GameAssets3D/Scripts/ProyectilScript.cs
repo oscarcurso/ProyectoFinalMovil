@@ -14,10 +14,6 @@ public class ProyectilScript : MonoBehaviour {
 
 
     private void Start() {
-
-
-
-
        
     }
 
@@ -32,19 +28,7 @@ public class ProyectilScript : MonoBehaviour {
             Destroy(this.gameObject);
         }
         Destroy(this.gameObject);
-
-
-
-
-
-
-    }
-
-      
-
-
-
-        
+    }       
     }
 
 

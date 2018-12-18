@@ -49,7 +49,6 @@ public class Enemigostontos : MonoBehaviour {
      void Update() {
         if (puntos >= puntosAlmacenados + 5) {
             SaludoFinal();
-            GameControllerPPref.StorePuntos(puntosAlmacenados + 5);
 
         }
 
@@ -60,6 +59,7 @@ public class Enemigostontos : MonoBehaviour {
     }
 
     private void SaludoFinal() {
+        GameControllerPPref.StorePuntos(puntosAlmacenados + 5);
         audioPrimero.Stop();
         camaraPpal.gameObject.SetActive(false);
         camaraSec.gameObject.SetActive(true);

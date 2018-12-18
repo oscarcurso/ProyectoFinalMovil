@@ -10,8 +10,8 @@ public class PlayerScript : MonoBehaviour
     float corriendo = 0.10f;
     public float speedAndar = 2f;
     public float speedCorrer = 2f;
-    public float speedRotar = 5f;
-    public float speedRotarParado = 2f;
+    public float speedRotar = 7f;
+    public float speedRotarParado = 4f;
     private int vidaMaxima;
     private int vidaActual;
     private int danyo;
@@ -37,7 +37,7 @@ public class PlayerScript : MonoBehaviour
     {
         int vidasGuardadas = GameControllerPPref.GetVidas();
         miAnimator = GetComponent<Animator>();
-       // GetComponentInChildren<Transform>().gameObject.name = "Puneteador";
+        GetComponentInChildren<Transform>().gameObject.name = "Puneteador";
         if (vidasGuardadas != 0)
         {
             txtVida.text = "Vidas: " + vidasGuardadas;
@@ -50,32 +50,50 @@ public class PlayerScript : MonoBehaviour
     }
     void Update()
     {
+        string[] gamepads = Input.GetJoystickNames();
+        for (int i = 0; i < gamepads.Length; i++)
+        {
+            print(i + ":" + gamepads[i].ToString());
+        }
+
         if (Input.GetButtonDown("Fire1"))
         {
             miAnimator.SetTrigger("ostiando");
-        }
-        if (Input.GetButtonDown("Fire2"))
-        {
-            miAnimator.SetTrigger("saltando");
-        }
+            print("Fuego 1");
+            
+        } 
 
-        if (Input.GetAxis("Vertical") > 0.5f)
+        if (Input.GetAxis("Vertical") > 0.1f )
         {
-            miAnimator.ResetTrigger("ostiando");
+           // miAnimator.ResetTrigger("ostiando");
             corriendo = corriendo - 0.01f;
             corriendo = Mathf.Max(0.11f, corriendo);
             miAnimator.SetFloat("corriendo", corriendo);
-        }
-        if(Input.GetAxis("Vertical")> 0.9f)
+        } else
         {
-            miAnimator.ResetTrigger("ostiando");
-            corriendo = corriendo + 0.01f;
-            corriendo = Mathf.Min(1, corriendo);
+            //miAnimator.ResetTrigger("ostiando");
+            corriendo = corriendo - 0.01f;
+            corriendo = Mathf.Max(0f, corriendo);
             miAnimator.SetFloat("corriendo", corriendo);
         }
+       /* if (Input.GetAxis("Vertical") < 0.8f)
+        {
+           // miAnimator.ResetTrigger("ostiando");
+            corriendo = corriendo + 0.01f;
+            corriendo = Mathf.Max(0.8f, corriendo);
+            miAnimator.SetFloat("corriendo", corriendo);
+        }
+        else
+        {
+            //miAnimator.ResetTrigger("ostiando");
+            corriendo = corriendo - 0.01f;
+            corriendo = Mathf.Max(0f, corriendo);
+            miAnimator.SetFloat("corriendo", corriendo);
+        }*/
+        transform.Rotate(0, Input.GetAxis("Horizontal") * speedRotarParado, 0);
 
-
-        /*if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.Space))
+        /*
+        if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.Space))
         {
             miAnimator.ResetTrigger("ostiando");
             corriendo = corriendo - 0.01f;
@@ -104,20 +122,21 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             miAnimator.SetTrigger("saltando");
-        }*/
+        }
 
 
         if (corriendo >= 0f)
         {
 
             transform.Rotate(0, Input.GetAxis("Horizontal") * speedRotarParado, 0);
-        }
+        }*/
         if (vidaActual <= 0)
         {
 
 
             SceneManager.LoadScene(4);
         }
+        
     }
 
     private void OnCollisionEnter(Collision collision)
