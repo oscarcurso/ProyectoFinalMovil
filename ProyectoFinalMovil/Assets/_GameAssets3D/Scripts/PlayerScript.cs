@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour
     private int danyo;
 
     public Text txtVida;
+    bool correr;
 
 
 
@@ -50,47 +51,49 @@ public class PlayerScript : MonoBehaviour
     }
     void Update()
     {
-        string[] gamepads = Input.GetJoystickNames();
+       /* string[] gamepads = Input.GetJoystickNames();
         for (int i = 0; i < gamepads.Length; i++)
         {
             print(i + ":" + gamepads[i].ToString());
-        }
+        }*/
 
         if (Input.GetButtonDown("Fire1"))
         {
             miAnimator.SetTrigger("ostiando");
             print("Fuego 1");
             
-        } 
+        }
+        if (Input.GetButtonDown("Fire3")) {
+           
+            print("Fuego 3");
 
-        if (Input.GetAxis("Vertical") > 0.1f )
+        }
+
+        if (Input.GetAxis("Vertical") > 0.1f /*&& Input.GetAxis("Vertical") <=0.8f*/)
         {
-           // miAnimator.ResetTrigger("ostiando");
+           
             corriendo = corriendo - 0.01f;
             corriendo = Mathf.Max(0.11f, corriendo);
             miAnimator.SetFloat("corriendo", corriendo);
         } else
         {
-            //miAnimator.ResetTrigger("ostiando");
+            
             corriendo = corriendo - 0.01f;
             corriendo = Mathf.Max(0f, corriendo);
             miAnimator.SetFloat("corriendo", corriendo);
         }
-       /* if (Input.GetAxis("Vertical") < 0.8f)
-        {
-           // miAnimator.ResetTrigger("ostiando");
+      /* if (Input.GetAxis("Vertical") > 0.8f && Input.GetAxis("Vertical") <= 1f) {
             corriendo = corriendo + 0.01f;
-            corriendo = Mathf.Max(0.8f, corriendo);
+            corriendo = Mathf.Min(0.81f, corriendo);
             miAnimator.SetFloat("corriendo", corriendo);
-        }
-        else
-        {
-            //miAnimator.ResetTrigger("ostiando");
+        } else {
             corriendo = corriendo - 0.01f;
-            corriendo = Mathf.Max(0f, corriendo);
+            corriendo = Mathf.Max(0.11f, corriendo);
             miAnimator.SetFloat("corriendo", corriendo);
+
         }*/
-        transform.Rotate(0, Input.GetAxis("Horizontal") * speedRotarParado, 0);
+
+            transform.Rotate(0, Input.GetAxis("Horizontal") * speedRotarParado, 0);
 
         /*
         if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.Space))
